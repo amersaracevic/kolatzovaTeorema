@@ -14,11 +14,15 @@ namespace kolatzovaTeorema
         //Moramo da stignemo do 1
         static void Main(string[] args)
         {
-            Console.WriteLine("Unesite broj ");
-            int broj = int.Parse(Console.ReadLine());
-            
+            int broj;
+            do
+            {
+                Console.WriteLine("Unesite broj ");
+                 broj = int.Parse(Console.ReadLine());
+            }
+            while (broj < 1);
 
-            while(broj != 1)
+            while (broj != 1)
             {
                 if (broj % 2 == 0)
                 {
@@ -26,7 +30,7 @@ namespace kolatzovaTeorema
                     Console.WriteLine(broj);
 
                 }
-                else if(broj % 2 == 1)
+                else 
                 {
                     broj = broj * 3 + 1;
                     Console.WriteLine(broj);
